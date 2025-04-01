@@ -2,7 +2,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from app.gemini import get_gemini_response
 
-app = FastAPI()
+app = FastAPI(root_path="/sweetBalance/api")
 
 app.add_middleware(
     CORSMiddleware,
